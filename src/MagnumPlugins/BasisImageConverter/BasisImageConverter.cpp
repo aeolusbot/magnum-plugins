@@ -37,6 +37,16 @@
 #include <Magnum/Math/Color.h>
 #include <Magnum/Math/Swizzle.h>
 #include <Magnum/PixelFormat.h>
+
+#ifdef CORRADE_TARGET_MSVC
+/* basisu_enc.h(689): error C3861: 'tolower': identifier not found, since MSVC
+   2019 16.6. Fixed by https://github.com/BinomialLLC/basis_universal/pull/106
+   but can't use that yet because the UASTC-enabled version crashes on trivial
+   tests. I also think including the whole <ostream> is beyond stupid, <cctype>
+   is enough. */
+#include <cctype>
+#endif
+
 #include <basisu_enc.h>
 #include <basisu_comp.h>
 #include <basisu_file_headers.h>

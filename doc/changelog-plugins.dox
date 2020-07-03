@@ -30,7 +30,12 @@ namespace Magnum {
 @tableofcontents
 @m_footernavigation
 
-@anchor changelog-plugins-latest
+@section changelog-plugins-latest Changes since 2020.06
+
+@subsection changelog-plugins-2020-06-buildsystem Build system
+
+-   Fixed build of @ref Trade::BasisImageConverter "BasisImageConverter" on
+    MSVC 2019 16.6
 
 @section changelog-plugins-2020-06 2020.06
 
